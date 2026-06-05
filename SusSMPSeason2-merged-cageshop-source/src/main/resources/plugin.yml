@@ -1,0 +1,100 @@
+name: SusSMPSeason2
+version: '1.0.0'
+main: com.donutcurrency.MergedDonutCurrencyPlugin
+api-version: '1.20'
+description: Sus SMP Season 2 economy, shop, trade, AFK, daily login, and cage shop plugin for Minecraft
+authors: [DonutDev, OpenAI]
+
+commands:
+  home:
+    description: Open the home menu or teleport to a home
+    usage: /home [slot|set|delete]
+    aliases: [homes]
+  sethome:
+    description: Set a home slot
+    usage: /sethome <1-5>
+  delhome:
+    description: Delete a home slot
+    usage: /delhome <1-5>
+  daily:
+    description: Claim or view your daily login reward
+    usage: /daily [claim]
+    aliases: [dailylogin, diemdanh]
+  lenh:
+    description: Show the basic commands
+    usage: /lenh
+    aliases: [commands, cmd, helpme]
+  grave:
+    description: Teleport to and open your latest death chest
+    usage: /grave [status|tp]
+    aliases: [deathchest, corpse]
+  money:
+    description: Currency commands
+    usage: /money <bal|pay|top> [player] [amount]
+    aliases: [bal, balance, coins]
+  pay:
+    description: Quick money transfer
+    usage: /pay <player> <amount>
+    aliases: [transfer, chuyentien, sendmoney]
+  afk:
+    description: Teleport to the AFK area
+    usage: /afk [status]
+  shop:
+    description: Open the shop
+    usage: /shop [category]
+    aliases: [store]
+  cage:
+    description: Open the cage shop
+    usage: /cage
+  sell:
+    description: Open the bulk sell basket
+    usage: /sell
+    aliases: [sellmenu]
+  trade:
+    description: Trade with another player
+    usage: /trade <player>
+    aliases: [exchange]
+  taixiu:
+    description: Server-wide Sic Bo betting commands
+    usage: /taixiu [menu|tai|xiu|lichsu|soicau|predict|status] [amount]
+    aliases: [tx]
+  admincurrency:
+    description: Admin currency commands
+    usage: /admincurrency <set|add|remove|check|reload|shopsync|shopprice|afk> ...
+    aliases: [acur, cadmin]
+    permission: donutcurrency.admin
+
+permissions:
+  donutcurrency.admin:
+    description: Admin permission
+    default: op
+  donutcurrency.home:
+    description: Use /home commands
+    default: true
+  donutcurrency.daily:
+    description: Use /daily commands
+    default: true
+  donutcurrency.grave:
+    description: Use /grave commands
+    default: true
+  donutcurrency.money:
+    description: Use /money
+    default: true
+  donutcurrency.pay:
+    description: Use /pay
+    default: true
+  donutcurrency.afk:
+    description: Use /afk
+    default: true
+  donutcurrency.shop:
+    description: Use /shop
+    default: true
+  donutcurrency.trade:
+    description: Use /trade
+    default: true
+  donutcurrency.taixiu:
+    description: Use /taixiu
+    default: true
+  donutcurrency.shop.sell:
+    description: Use the sell basket and sell items in the shop
+    default: true
